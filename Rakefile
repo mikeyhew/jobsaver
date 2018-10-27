@@ -4,3 +4,10 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
+
+require 'rubocop/rake_task'
+RuboCop::RakeTask.new
+
+# rspec wants to go first for some reason
+task(:default).clear
+task :default => [:rubocop, :spec]
