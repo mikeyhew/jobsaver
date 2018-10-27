@@ -10,4 +10,4 @@ RuboCop::RakeTask.new
 
 # rspec wants to go first for some reason
 task(:default).clear
-task :default => [:spec]
+task :default => [:rubocop, :spec]
