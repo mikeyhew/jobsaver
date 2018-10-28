@@ -13,7 +13,8 @@
   %tbody
     - @jobs.each do |job|
       %tr
-        %td= job.url
+        %td
+          %a{href: external_link(job.url)}= job.url
         %td= job.notes
         %td= link_to 'Show', job
         %td= link_to 'Edit', edit_job_path(job)

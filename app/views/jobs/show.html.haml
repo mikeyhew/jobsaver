@@ -2,7 +2,7 @@
 
 %p
   %b Url:
-  = @job.url
+  %a{href: external_link(@job.url)}= @job.url
 %p
   %b Notes:
   = @job.notes
